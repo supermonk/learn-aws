@@ -19,6 +19,7 @@ unzip terraform_0.11.3_linux_amd64.zip
 mv terraform /opt/terraform/
 sudo rm ~/.bash_profile
 cp /vagrant_data/.bash_profile ~/.bash_profile
+runuser -l  vagrant -c 'cp /vagrant_data/.bash_profile ~/.bash_profile'
 source ~/.bash_profile
 mkdir ~/.aws
 ansible local -m ping -i /vagrant_data/hosts.yaml
