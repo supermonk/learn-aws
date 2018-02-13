@@ -9,6 +9,7 @@ sudo curl -O https://bootstrap.pypa.io/get-pip.py
 sudo /usr/bin/python3.4 get-pip.py
 pip --version
 pip install awscli --upgrade --user
+sudo yum install unzip -y
 sudo yum install ansible -y
 sudo yum install wget -y
 wget https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip
