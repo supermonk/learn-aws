@@ -17,9 +17,8 @@ sudo mkdir /opt/terraform/
 sudo chmod 777 /opt/terraform/
 unzip terraform_0.11.3_linux_amd64.zip
 mv terraform /opt/terraform/
-echo "PATH=$PATH:$HOME/.local/bin:$HOME/bin" > ~/.bash_profile
-echo "export TERRAFORM_HOME=/opt/terraform/terraform" >> ~/.bash_profile
-echo "export PATH=$TERRAFORM_HOME:$PATH" >> ~/.bash_profile
+sudo rm ~/.bash_profile
+cp /vagrant_data/.bash_profile ~/.bash_profile
 source ~/.bash_profile
 mkdir ~/.aws
 ansible local -m ping -i /vagrant_data/hosts.yaml
