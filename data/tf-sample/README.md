@@ -24,3 +24,13 @@ Follow instructions to provide Access Key Id and Secret Access Key
 # Destroy the VPC
     cd /vagrant/data/tf-sample/environments/dev/networking/
     terraform destroy -var-file=terraform.tfvars
+
+# References
+
+[Sample VPC configuration created using Terraform](https://nickcharlton.net/posts/terraform-aws-vpc.html)
+
+[Terraform best practices](https://github.com/BWITS/terraform-best-practices)
+
+[GitHub repository that was referenced to create this project](https://github.com/contino/terraform-learn/tree/master/aws)
+
+[Terraform repository conventions](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html) 
