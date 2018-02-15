@@ -1,0 +1,5 @@
+bucket = "a.nainamvala.cloud.samsung.com"
+key    = "terraform/states/dev/compute/terraform.tfstate"
+region = "us-east-1"
+dynamodb_table = "terraform_states_b2b_dev"
+profile    = "w_b2b_ali"
