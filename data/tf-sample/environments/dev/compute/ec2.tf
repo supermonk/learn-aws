@@ -17,6 +17,8 @@ module "compute" {
 
   ami_id = "${var.ami_id}"
   number_of_instances = "${var.number_of_instances}"
+  vpc_id = "${data.terraform_remote_state.vpc.vpc_id}"
   subnet_id = "${data.terraform_remote_state.vpc.public_subnet_a_id}"
   instance_type = "${var.instance_type}"
+  key_name = "${var.key_name}"
 }

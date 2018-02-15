@@ -2,8 +2,11 @@
     vagrant ssh
 
 # Manual Steps before automation
-    Create one bucket 
-    Create one dynamodb table
+
+  Create a bucket in the region designated to store the tfstate file.
+
+  Create a dynamodb table in the region designated to store the tfstate file.
+
 # AWS key configuration :
     aws configure --profile <profile_name>
 Follow instructions to provide Access Key Id and Secret Access Key
@@ -13,6 +16,10 @@ Follow instructions to provide Access Key Id and Secret Access Key
     terraform init -backend-config=backend.tfvars
     terraform plan -var-file=terraform.tfvars
     terraform apply -var-file=terraform.tfvars
+
+# Prerequisite for EC2 instance creation
+
+Go to EC2 management console on AWS and create a new key-pair by navigating to "Key Pairs" section.
 
 # Terraform commands to create one EC2 instance in the previously created VPC
     cd /vagrant/data/tf-sample/environments/dev/compute/
@@ -36,4 +43,4 @@ Follow instructions to provide Access Key Id and Secret Access Key
 
 [GitHub repository that was referenced to create this project](https://github.com/contino/terraform-learn/tree/master/aws)
 
-[Terraform repository conventions](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html) 
+[Terraform repository conventions](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html)

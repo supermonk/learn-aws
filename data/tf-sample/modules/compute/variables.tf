@@ -10,5 +10,7 @@ variable name_tag_prefix {}
 
 variable ami_id {}
 variable number_of_instances {}
+variable vpc_id {}
 variable subnet_id {}
 variable instance_type {}
+variable key_name {}
