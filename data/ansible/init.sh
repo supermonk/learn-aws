@@ -1,7 +1,7 @@
 sudo yum install ansible -y
 sudo yum-builddep python -y
 
-ansible-playbook /vagrant_data/first_playbook.yaml
+ansible-playbook /vagrant_data/ansible/first_playbook.yaml -vvv
 sudo yum updatedb
 sudo curl -O https://bootstrap.pypa.io/get-pip.py
 sudo /usr/bin/python3.4 get-pip.py

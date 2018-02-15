@@ -8,7 +8,7 @@ sudo yum install python34 -y
 sudo curl -O https://bootstrap.pypa.io/get-pip.py
 sudo /usr/bin/python3.4 get-pip.py
 pip --version
-pip install awscli --upgrade --user
+runuser -l  vagrant -c 'pip install awscli --upgrade --user'
 sudo yum install unzip -y
 sudo yum install ansible -y
 sudo yum install wget -y
