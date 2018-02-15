@@ -1,6 +1,9 @@
 # Vagrant login
     vagrant ssh
 
+# Manual Steps before automation
+    Create one bucket 
+    Create one dynamodb table
 # AWS key configuration :
     aws configure --profile <profile_name>
 Follow instructions to provide Access Key Id and Secret Access Key
