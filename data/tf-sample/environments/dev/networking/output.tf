@@ -1,4 +1,5 @@
 output "vpc_id" {
+  # output all the variables from module
   value = "${module.networking.vpc_id}"
 }
 

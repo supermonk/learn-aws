@@ -3,8 +3,11 @@ terraform {
 }
 
 module "networking" {
+  # Relative path for the core module
+  # name of the module should be same as core module, TODO to check if that is necessisty
   source      = "./../../../modules/networking"
 
+  # Define the variables which is used in networking
   aws_profile = "${var.aws_profile}"
   region = "${var.region}"
   shared_credentials_file = "${var.shared_credentials_file}"
