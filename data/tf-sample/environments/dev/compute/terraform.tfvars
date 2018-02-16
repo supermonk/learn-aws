@@ -10,5 +10,7 @@ name_tag_prefix = "sample dev"
 
 ami_id = "ami-f63b1193"
 number_of_instances = "1"
+vpc_id = ""
 subnet_id = ""
 instance_type = "t2.micro"
+key_name = "ali_key_pair_ohio"
