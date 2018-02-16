@@ -63,4 +63,12 @@ fabric.properties
 =======
 
 .DS_Store
+./data/ansible/spring-boot-hello-world/target
+./data/ansible/spring-boot-hello-world/target/*
+./data/ansible/spring-boot-hello-world/logs/*
+./data/ansible/spring-boot-hello-world/logs
+data/ansible/spring-boot-hello-world/target/
+data/ansible/spring-boot-hello-world/logs/
+data/ansible/spring-boot-hello-world/logs/*
+data/ansible/spring-boot-hello-world/target/*
 .vagrant
