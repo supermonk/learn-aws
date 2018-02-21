@@ -1,6 +1,11 @@
 - hosts:
-    - localhost  
+    - app
+
+  vars:
+    jar_name: spring-boot-hello-world-1.0-SNAPSHOT.jar
+
   tasks:
+
     - name: ensure apache is at the latest version
       yum: pkg={{item}} state=latest
       become: true
@@ -12,3 +17,33 @@
         - python34
         - unzip
         - wget
+        - java-1.8.0-openjdk-headless
+
+    - name: Ansible copy jar from a directory to remote server
+      copy:
+        src: /vagrant_data/ansible/spring-boot-hello-world/target/{{jar_name}}
+        dest: /tmp
+
+    - name: Get running java process
+      shell: "ps -ef | grep -v grep | grep -w {{jar_name}} | awk '{print $2}'"
+      register: running_processes
+
+    - name: Kill running processes
+      shell: "kill {{ item }}"
+      with_items: "{{ running_processes.stdout_lines }}"
+
+    - wait_for:
+        path: "/proc/{{ item }}/status"
+        state: absent
+      with_items: "{{ running_processes.stdout_lines }}"
+      ignore_errors: yes
+      register: killed_processes
+
+    - name: Force kill stuck processes
+      shell: "kill -9 {{ item }}"
+      with_items: "{{ killed_processes.results | select('failed') | map(attribute='item') | list }}"
+
+    - name: Execute jar
+      shell: nohup /usr/bin/java8 -jar /tmp/{{jar_name}} &
+      async: 45
+      poll: 0

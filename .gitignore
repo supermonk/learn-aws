@@ -72,3 +72,6 @@ data/ansible/spring-boot-hello-world/logs/
 data/ansible/spring-boot-hello-world/logs/*
 data/ansible/spring-boot-hello-world/target/*
 .vagrant
+
+**/*.tfvars
+**/*.pem
