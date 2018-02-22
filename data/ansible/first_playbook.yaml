@@ -13,8 +13,6 @@
         - mlocate
         - vim
         - yum-utils
-        - epel-release
-        - python34
         - unzip
         - wget
         - java-1.8.0-openjdk-headless

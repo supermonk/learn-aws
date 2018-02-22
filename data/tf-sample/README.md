@@ -41,7 +41,18 @@ Go to EC2 management console on AWS and create a new key-pair by navigating to "
 
     export TF_LOG = DEBUG
 
+# CIDR Address
+    10.0.0.0/16   (IPV4 8 bits each block = > 2 ^ 32 willl be = 1024 * 1024 * 1024 * 4 => appx 4 billion)
+                   IPV6                       2 ^ 128 possible
+    10 & 0  (first two 8 bits are fixed)
+    
+    0 &0 are modifiable
+    
+    10.0.0.0/32  nothing modifiable only one ip.
+    10.0.0.0/31  = > 10.0.0.0.0 10.0.0.0.1
+
 # References
+
 
 [Sample VPC configuration created using Terraform](https://nickcharlton.net/posts/terraform-aws-vpc.html)
 

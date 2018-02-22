@@ -1,3 +1,5 @@
 [local]
 127.0.0.1 ansible_connection=local
 192.168.70.102 ansible_connection=local
+[app]
+52.49.135.103 ansible_ssh_private_key_file=/vagrant/n.bidari-test.pem.txt ansible_user=ec2-user
