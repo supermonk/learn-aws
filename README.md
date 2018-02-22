@@ -14,4 +14,5 @@ Learn-Aws
     vagrant destroy -f 
     vagrant resume --no-provision
 
-## Study Plan 
+## Study Plan
+# 
