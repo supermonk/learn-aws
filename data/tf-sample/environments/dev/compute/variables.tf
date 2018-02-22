@@ -14,3 +14,13 @@ variable vpc_id {}
 variable subnet_id {}
 variable instance_type {}
 variable key_name {}
+
+variable elb_logs_bucket_name {}
+variable app_port {}
+variable elb_health_check {}
+variable elb_health_check_protocol {}
+variable elb_healthy_threshold {}
+variable elb_health_check_timeout {}
+variable elb_unhealthy_threshold {}
+variable elb_access_logs_bucket_prefix {}
+variable elb_access_logs_interval {}

@@ -17,6 +17,13 @@ resource "aws_security_group" "ec2_sg" {
     cidr_blocks = ["0.0.0.0/0"]
 	}
 
+	ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "TCP"
+    security_groups = ["${var.elb_sg_id}"]
+	}
+
   # allow all outgoing traffic
 	egress {
     from_port   = 0

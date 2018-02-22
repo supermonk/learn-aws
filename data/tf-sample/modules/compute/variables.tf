@@ -14,3 +14,5 @@ variable vpc_id {}
 variable subnet_id {}
 variable instance_type {}
 variable key_name {}
+variable user_data {}
+variable elb_sg_id {}

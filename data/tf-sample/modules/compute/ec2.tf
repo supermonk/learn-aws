@@ -15,4 +15,6 @@ resource "aws_instance" "ec2_instance" {
     tags {
         Name = "${var.name_tag_prefix} - ec2 - ${count.index}"
     }
+
+    user_data = "${var.user_data}"
 }
