@@ -1,5 +1,5 @@
 resource "aws_db_instance" "my_database" {
-    
+
     # Size of DB, default 2 GB
     allocated_storage    = "${var.db_size_in_gb}"
 
@@ -19,6 +19,14 @@ resource "aws_db_instance" "my_database" {
     username             = "${var.db_username}"
     password             = "${var.db_password}"
 
-    # The list of VPC, subnet and SG to associate 
-    vpc_security_group_ids = ["${aws_security_group.ec2_sg.id}"]
+    multi_az = "false"
+    db_subnet_group_name   = "${aws_db_subnet_group.default.id}"
+    # The list of VPC, subnet and SG to associate
+    vpc_security_group_ids = ["${aws_security_group.rds_sg.id}"]
+}
+
+resource "aws_db_subnet_group" "default" {
+  name        = "main_subnet_group"
+  description = "Our main group of subnets"
+  subnet_ids  = ["${var.private_subnet_id}", "${var.public_subnet_id}"]
 }

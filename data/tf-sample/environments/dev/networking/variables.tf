@@ -7,3 +7,4 @@ variable vpc_cidr_block {}
 variable public_subnet_a_cidr_block {}
 variable private_subnet_a_cidr_block {}
 variable availability_zone_1 {}
+variable availability_zone_2 {}

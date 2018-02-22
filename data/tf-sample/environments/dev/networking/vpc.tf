@@ -17,4 +17,5 @@ module "networking" {
   public_subnet_a_cidr_block = "${var.public_subnet_a_cidr_block}"
   private_subnet_a_cidr_block = "${var.private_subnet_a_cidr_block}"
   availability_zone_1 = "${var.availability_zone_1}"
+  availability_zone_2 = "${var.availability_zone_2}"
 }

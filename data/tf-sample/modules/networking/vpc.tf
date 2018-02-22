@@ -28,7 +28,7 @@ resource "aws_subnet" "public_subnet_a" {
 resource "aws_subnet" "private_subnet_a" {
   vpc_id            = "${aws_vpc.vpc.id}"
   cidr_block        = "${var.private_subnet_a_cidr_block}"
-  availability_zone = "${var.availability_zone_1}"
+  availability_zone = "${var.availability_zone_2}"
 
   tags {
     Name = "${var.name_tag_prefix} - private_subnet_a"
