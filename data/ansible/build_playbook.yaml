@@ -1,0 +1,13 @@
+- hosts:
+    - local
+
+  tasks:
+
+    - name: Install software needed for build
+      yum: pkg={{item}} state=latest
+      become: true
+      with_items:
+        - maven
+
+    - name: Maven install
+      shell: cd /vagrant_data/ansible/spring-boot-hello-world; mvn install
