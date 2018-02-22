@@ -11,6 +11,7 @@ Learn-Aws
 	
 ## additional commands
     vagrant suspend
-	vagrant destroy -f 
+    vagrant destroy -f 
+    vagrant resume --no-provision
 
 ## Study Plan 

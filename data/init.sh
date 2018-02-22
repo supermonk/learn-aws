@@ -5,6 +5,7 @@ sudo yum install -y  yum-utils python-argparse
 sudo yum-builddep python -y
 sudo yum install epel-release -y
 sudo yum install python34 -y
+sudo yum install java -y
 sudo curl -O https://bootstrap.pypa.io/get-pip.py
 sudo /usr/bin/python3.4 get-pip.py
 pip --version
