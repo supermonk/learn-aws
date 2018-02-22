@@ -72,6 +72,8 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision "shell", inline: "/bin/sh /vagrant/data/init.sh"
+  config.vm.provision "shell", inline: "/bin/sh /vagrant/data/setup-java.sh"
+  config.vm.provision "shell", inline: "/bin/sh /vagrant/data/maven-setup.sh"
 
   config.vm.define :c7002 do |c7002|
     c7002.vm.hostname = "c7002.dev.com"
