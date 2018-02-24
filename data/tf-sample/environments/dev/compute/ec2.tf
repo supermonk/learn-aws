@@ -41,6 +41,8 @@ module "compute" {
   rm -rf latest.tar.gz
   chmod -R 755 wp-content
   chown -R apache:apache wp-content
+  chown -R root:apache /var/www/html/wordpress
+  find /var/www/html/wordpress -type d -exec chmod 775 {} \;
   service httpd start
   chkconfig httpd on
   HEREDOC
