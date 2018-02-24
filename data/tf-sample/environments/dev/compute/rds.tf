@@ -14,4 +14,8 @@ module "rds" {
     ec2_sg_id = "${module.compute.ec2_sg_id}"
     name_tag_prefix = "${var.name_tag_prefix}"
 
+    db_name = "${var.db_name}"
+    db_username = "${var.db_username}"
+    db_password = "${var.db_password}"
+
 }

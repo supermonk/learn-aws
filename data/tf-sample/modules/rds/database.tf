@@ -12,6 +12,8 @@ resource "aws_db_instance" "my_database" {
     # Use db.t1.micro by default
     instance_class       = "${var.db_instance_class}"
 
+    skip_final_snapshot = "true"
+
     # Database name
     name                 = "${var.db_name}"
 

@@ -13,3 +13,7 @@ output "elb_dns_name" {
 output "elb_sg_id" {
   value = "${module.elb.elb_sg_id}"
 }
+
+output "rds_endpoint" {
+  value = "${module.rds.rds_endpoint}"
+}

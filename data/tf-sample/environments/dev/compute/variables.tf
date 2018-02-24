@@ -24,3 +24,9 @@ variable elb_health_check_timeout {}
 variable elb_unhealthy_threshold {}
 variable elb_access_logs_bucket_prefix {}
 variable elb_access_logs_interval {}
+
+variable db_name {}
+variable db_username {}
+variable db_password {}
+variable db_instance_class {}
+variable db_engine_version {}
