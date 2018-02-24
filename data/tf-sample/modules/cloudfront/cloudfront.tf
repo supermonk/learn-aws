@@ -15,7 +15,6 @@ resource "aws_cloudfront_distribution" "my_distribution" {
     default_root_object = "index.html"
     enabled             = true
     is_ipv6_enabled     = true
-    default_root_object = "index.html"
 
     aliases = []
 

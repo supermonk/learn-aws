@@ -1,6 +1,6 @@
 resource "aws_db_instance" "my_database" {
 
-    # Size of DB, default 2 GB
+    # Size of DB, default 20 GB
     allocated_storage    = "${var.db_size_in_gb}"
 
     storage_type         = "${var.db_storage_type}"
@@ -9,7 +9,7 @@ resource "aws_db_instance" "my_database" {
     engine               = "${var.db_engine}"
     engine_version       = "${var.db_engine_version}"
 
-    # Use db.t1.micro by default
+    # Use db.t2.micro by default
     instance_class       = "${var.db_instance_class}"
 
     # Database name
